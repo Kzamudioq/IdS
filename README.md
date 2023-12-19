@@ -3,6 +3,14 @@
 ## Descripción del trabajo práctico
 ¡Hola, amiguito! Este trabajo práctico es tan emocionante como un banana split. Vamos a hacer cosas geniales con Git, Make y Doxygen. Los minions están listos para la acción, ¡así que presta atención!
 
+---
+
+
+<p align="center" width="100%">
+    <img width="60%" src="https://github.com/Kzamudioq/SOPG/assets/138271936/de274c78-c5b1-4ec7-9dfb-88a55dcb7fcb"> 
+</p>
+
+
 ## Tareas a Realizar
 ### 1. Resolución de un Conflicto en la Rama Master
 ¡Oh, no! Hubo un conflicto en la rama master del repositorio de la cátedra. Para arreglarlo, vamos a hacer un commit con la resolución del conflicto. Aquí tienes un ejemplo de código:
