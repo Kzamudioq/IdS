@@ -36,7 +36,7 @@ Agregar una nueva regla en el archivo makefile del repositorio privado. Esta reg
 4. Crear pull request para integrar los cambios en la rama develop del repositorio de la cátedra.
 
 ## Recursos Adicionales
-- [Enlace a la documentación de Doxygen](URL_DOCUMENTACION_DOXYGEN)
+- [Enlace a la documentación de Doxygen](https://github.com/Kzamudioq/IdS/blob/master/doxyfile)
 
 ## Notas Importantes
 - Asegurarse de seguir las buenas prácticas de desarrollo y documentación.
