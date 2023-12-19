@@ -91,6 +91,37 @@ void GpioSetState(gpio_t gpio, bool state);
  */
 bool GpioGetState(gpio_t gpio);
 
+/**
+ * @brief Función para crear un puerto digital con estado inicial
+ *
+ * @param port Numero de puerto GPIO correspondiente
+ * @param bit  Numero de bit asignado al puerto
+ * @param output True indica Salida, False indica Entrada
+ * @param state Estado inicial del pin
+ * @return gpio_t Puntero al objeto creado
+ */
+gpio_t GpioCreateWithState(uint8_t port, uint8_t bit, bool output, bool state);
+
+/**
+ * @brief Inicializa el objeto GPIO con parámetros dados
+ *
+ * @param gpio Handle del GPIO
+ * @param port Numero de puerto GPIO correspondiente
+ * @param bit  Numero de bit asignado al puerto
+ * @param output True indica Salida, False indica Entrada
+ * @param state Estado inicial del pin
+ * @return -
+ */
+void GpioInit(gpio_t gpio, uint8_t port, uint8_t bit, bool output, bool state);
+
+/**
+ * @brief Destruye el objeto GPIO y libera la memoria (si no es estático)
+ *
+ * @param gpio Handle del GPIO
+ * @return -
+ */
+void GpioDestroy(gpio_t gpio);
+
 /* === End of documentation ==================================================================== */
 
 #ifdef __cplusplus

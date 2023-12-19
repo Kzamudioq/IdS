@@ -93,6 +93,22 @@ gpio_t GpioCreate(uint8_t port, uint8_t bit) {
     return self;
 }
 
+gpio_t GpioCreateWithState(uint8_t port, uint8_t bit, bool output, bool state) {
+    gpio_t self;
+#ifdef USE_STATIC_MEM
+    self = GpioAllocate();
+#else
+    self = malloc(sizeof(struct gpio_h));
+#endif
+    if (self) {
+        self->port = port;
+        self->pin = bit;
+        self->output = output;
+        self->state = state;
+    }
+    return self;
+}
+
 void GpioSetDirection(gpio_t self, bool output) {
     self->output = output;
 }
@@ -109,6 +125,19 @@ void GpioSetState(gpio_t self, bool state) {
 
 bool GpioGetState(gpio_t self) {
     return self->state;
+}
+
+void GpioInit(gpio_t self, uint8_t port, uint8_t bit, bool output, bool state) {
+    self->port = port;
+    self->pin = bit;
+    self->output = output;
+    self->state = state;
+}
+
+void GpioDestroy(gpio_t self) {
+#ifndef USE_STATIC_MEM
+    free(self);
+#endif
 }
 
 /* === End of documentation ==================================================================== */
